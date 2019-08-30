@@ -22,6 +22,6 @@ class SlackClient
                 "channel" => $this->channel,
                 "text" => $text
             )
-        ))
+        ));
     }
 }
