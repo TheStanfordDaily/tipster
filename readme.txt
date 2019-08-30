@@ -3,8 +3,8 @@ Contributors: epicfaace
 Donate link: https://www.stanforddaily.com/
 Tags: tips, slack
 Requires at least: 4.0
-Tested up to: 5.1
-Requires PHP: 5.2.4
+Tested up to: 7.2
+Requires PHP: 5.6
 Stable tag: trunk
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
