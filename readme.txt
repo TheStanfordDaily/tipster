@@ -1,5 +1,5 @@
 === Tipster ===
-Contributors: hesyifei
+Contributors: epicfaace
 Donate link: https://www.stanforddaily.com/
 Tags: tips, slack
 Requires at least: 4.0
