@@ -8,7 +8,7 @@ class Test_API extends WP_UnitTestCase {
 	 */
 	protected $server;
  
-	protected $namespaced_route = 'caldera/forms';
+	protected $namespaced_route = 'tipster/v1';
  
  
 	public function setUp() {
@@ -21,7 +21,7 @@ class Test_API extends WP_UnitTestCase {
 	}
  
 	public function test_name_route() {
-		$request  = new WP_REST_Request( 'GET', '/api/v2/name' );
+		$request  = new WP_REST_Request( 'POST', '/tipster/v1/tips' );
 		$response = $this->server->dispatch( $request );
 		$this->assertEquals( 200, $response->get_status() );
 		$data = $response->get_data();

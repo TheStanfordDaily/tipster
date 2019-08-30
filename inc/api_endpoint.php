@@ -1,7 +1,7 @@
 <?php
 namespace StanfordDaily\Tipster;
 
-include "./SlackClient.php";
+include __DIR__ . "/SlackClient.php";
 
 function handle_new_tip() {
     $client = new SlackClient(array(
