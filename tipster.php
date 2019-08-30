@@ -12,5 +12,5 @@ namespace StanfordDaily\Tipster;
 
 const REST_ENDPOINT = "tipster/v1";
 
-include  __DIR__ . "inc/options_page.php";
-include  __DIR__ . "inc/api_endpoint.php";
+include  __DIR__ . "/inc/options_page.php";
+include  __DIR__ . "/inc/api_endpoint.php";
