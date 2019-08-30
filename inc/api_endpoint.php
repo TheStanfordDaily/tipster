@@ -1,18 +1,19 @@
 <?php
 namespace StanfordDaily\Tipster;
 
-include __DIR__ . "/SlackClient.php";
+require_once __DIR__ . "/SlackClient.php";
+require_once __DIR__ . "/HTTPClient.php";
 
 function handle_new_tip() {
     $client = new SlackClient(array(
+        "httpClient" => new HTTPClient(),
         "token" => get_option("tipster_slack_token"),
         "channel" => get_option("tipster_slack_channel")
     ));
     $params = $request->get_params();
-    $client->send_message(array(
-        "email" => isset($params["email"]) ? $params["email"]: "",
-        "message" => $params["message"]
-    ));
+    $email = isset($params["email"]) ? $params["email"]: "Anonymous";
+    $message = $params["message"];
+    $client->send_message("Tip from ${email}: ${message}");
 }
 
 add_action( 'rest_api_init', function () {
